@@ -1,0 +1,67 @@
+PS C:\Users\User\Documents\esilv\annee4\rust\RUST_project> cargo run -- --help
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.09s
+     Running `target\debug\RUST_project.exe --help`
+Fast multi-threaded port scanner
+
+Usage: RUST_project.exe [OPTIONS] <TARGET>
+
+Arguments:
+  <TARGET>  Target IP or Hostname (e.g., 127.0.0.1 or google.com)
+
+Options:
+  -s, --start <START>      Start port [default: 1]
+  -e, --end <END>          End port [default: 1024]
+  -t, --threads <THREADS>  Number of parallel threads (speed) [default: 100]
+      --timeout <TIMEOUT>  Timeout per port in milliseconds [default: 500]
+  -h, --help               Print help
+  -V, --version            Print version
+PS C:\Users\User\Documents\esilv\annee4\rust\RUST_project> cargo run -- 127.0.0.1
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.06s
+     Running `target\debug\RUST_project.exe 127.0.0.1`
+
+========================================
+   RUST RECON - OFFENSIVE/DEFENSIVE TOOL
+========================================
+Target:  127.0.0.1
+Range:   1-1024
+Threads: 100
+Scanning...
+
+[+] Port 135 (RPC) is OPEN
+[+] Port 445 (SMB) is OPEN
+
+========================================
+Scan complete in 5.62s
+PS C:\Users\User\Documents\esilv\annee4\rust\RUST_project> cargo run -- 192.168.56.1
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.07s
+     Running `target\debug\RUST_project.exe 192.168.56.1`
+
+========================================
+   RUST RECON - OFFENSIVE/DEFENSIVE TOOL
+========================================
+Target:  192.168.56.1
+Range:   1-1024
+Threads: 100
+Scanning...
+
+
+========================================
+Scan complete in 5.63s
+PS C:\Users\User\Documents\esilv\annee4\rust\RUST_project> cargo run -- scanme.nmap.org --start 20 --end 100
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.07s
+     Running `target\debug\RUST_project.exe scanme.nmap.org --start 20 --end 100`
+
+========================================
+   RUST RECON - OFFENSIVE/DEFENSIVE TOOL
+========================================
+Target:  2600:3c01::f03c:91ff:fe18:bb2f
+Range:   20-100
+Threads: 100
+Scanning...
+
+[+] Port 80 (HTTP) is OPEN
+[+] Port 22 (SSH) is OPEN
+
+========================================
+Scan complete in 516.96ms
+PS C:\Users\User\Documents\esilv\annee4\rust\RUST_project>

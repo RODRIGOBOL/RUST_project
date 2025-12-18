@@ -68,4 +68,4 @@ Ce logiciel a été développé à des fins purement éducatives pour comprendre
 
 ## Auteur
 
-Projet développé par [Ton Nom].
+Projet développé par Franck POKAM et Daniel ORDUY REY.
